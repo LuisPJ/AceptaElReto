@@ -10,17 +10,14 @@ public class EsMatrizDeIdentidad {
      */
 
     public static void main(String[] args) {
+
         Scanner in = new Scanner(System.in);
-        //Bucle donde recibimos los datos hasta que el tamaño de la matriz sea cero
-        int ladoMatrix = 0;
-        do {
-            ladoMatrix = in.nextInt();
+
+        while(true){
+            int ladoMatrix = in.nextInt();
             if(ladoMatrix == 0){
                 break;
             }
-
-            //La matriz no puede ser de mas de 50 de lado
-            if(ladoMatrix > 50){System.out.println("NO"); break;}
 
             int[][] matrix = new int[ladoMatrix][ladoMatrix];
             in.nextLine();
@@ -28,11 +25,7 @@ public class EsMatrizDeIdentidad {
                 String linea = in.nextLine();
                 String[] partes = linea.split(" ");
                 for (int j = 0; j < matrix.length; j++) {
-                    //Los valores de la matriz deben ir de -1000 a 1000
-                    if(Integer.parseInt(partes[j]) <= 1000 && Integer.parseInt(partes[j]) >= -1000){
-                        matrix[i][j] = Integer.parseInt(partes[j]);
-                    }
-                    
+                    matrix[i][j] = Integer.parseInt(partes[j]);                  
                 }
             }
             //Verificar que todos los numeros excepto la diagonal sea cero
@@ -57,12 +50,7 @@ public class EsMatrizDeIdentidad {
                 System.out.println("NO");
             }
 
-        } while (ladoMatrix != 0);
-        
-        
-
-        //Verificar que la diagonal se de 1
-
+        }
     }
     
 }
