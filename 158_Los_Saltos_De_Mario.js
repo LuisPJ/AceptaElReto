@@ -13,12 +13,10 @@ public class problem_158 {
         for (int i = 0; i < numeroCasos; i++) {
             int cantidadMuros = scanner.nextInt();
             
-            // Procesar el primer muro
             int muroAnterior = scanner.nextInt();
             int saltosArriba = 0;
             int saltosAbajo = 0;
             
-            // Procesar los muros restantes
             for (int j = 1; j < cantidadMuros; j++) {
                 int muroActual = scanner.nextInt();
                 
